@@ -36,7 +36,6 @@ class Index extends React.Component {
 	
 	incrementScore() {
 		this.setState({ score: this.state.score + 1 })
-		console.log(this.state)
 	}
 	
 	render() {

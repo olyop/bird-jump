@@ -4,13 +4,13 @@ import React from 'react'
 // Import functions
 import rand from '../../../helpers/random'
 
-const WallGenerator = () => {
+const WallGenerator = props => {
 	
 	return (
-		<div className="wall-inner">
+		<div className="wall-inner" style={{ left: props.left }}>
 		
-			<div className="wall wall-top" style={{ height: rand(100, 250) }}></div>
-			<div className="wall wall-bottom" style={{ height: rand(100, 250) }}></div>
+			<div className="wall wall-top" style={{ height: String(rand(100, 200)) + 'px' }}></div>
+			<div className="wall wall-bottom" style={{ height: String(rand(100, 200)) + 'px' }}></div>
 			
 		</div>
 	)
