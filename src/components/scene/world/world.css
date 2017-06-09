@@ -1,0 +1,14 @@
+.world {
+	position: relative; }
+	.wall {
+		position: absolute;
+		left: 0;
+		width: 50px;
+		background-color: #ff5722; }
+
+.world .column {
+	padding-right: 40px; }
+	.world .column .wall-top {
+		top: 0; }
+	.world .column .wall-bottom {
+		bottom: 0; }

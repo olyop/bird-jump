@@ -1,0 +1,13 @@
+.score {
+	height: 100px;
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #000; }
+	.score p {
+		color: #fff;
+		-webkit-user-select: none;
+		cursor: pointer;
+		font-size: 30px; }
