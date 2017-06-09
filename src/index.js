@@ -22,7 +22,7 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			hasGameStarted: true,
+			hasGameStarted: false,
 			score: 0
 		}
 		

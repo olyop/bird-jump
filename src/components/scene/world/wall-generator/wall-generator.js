@@ -1,13 +1,10 @@
 // Import React
 import React from 'react'
 
+// Import functions
+import rand from '../../../helpers/random'
+
 const WallGenerator = () => {
-
-	const walls
-
-	for (var i = 0; i < 4; i++) {
-		
-	}
 	
 	return (
 		<div className="wall-inner">
