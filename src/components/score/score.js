@@ -12,7 +12,14 @@ class Score extends React.Component {
 		
 		return (
 			<div className="score">
-				<p onClick={props.incrementScore}>{props.gameState.score}</p>
+				<div className="score-buttons">
+					<button className="jump-button">
+						<i className="material-icons">arrow_upward</i>
+					</button>
+				</div>
+				<div className="current-score">
+					<p onClick={props.incrementScore}>{props.gameState.score}</p>
+				</div>
 			</div>
 		)
 	}

@@ -23,15 +23,35 @@ class Index extends React.Component {
 		
 		this.state = {
 			hasGameStarted: false,
-			score: 0
+			score: 0,
+			difficultyLevel: 1
 		}
 		
 		this.startGame = this.startGame.bind(this)
+		this.closeGame = this.closeGame.bind(this)
+		this.makeDifficultyEasier = this.makeDifficultyEasier.bind(this)
+		this.makeDifficultyHarder = this.makeDifficultyHarder.bind(this)
 		this.incrementScore = this.incrementScore.bind(this)
 	}
 	
 	startGame() {
 		this.setState({ hasGameStarted: true })
+	}
+	
+	closeGame() {
+		this.setState({ hasGameStarted: false })
+	}
+	
+	makeDifficultyEasier() {
+		if (this.state.difficultyLevel > 0) {
+			this.setState({ difficultyLevel: this.state.difficultyLevel - 1 })
+		}
+	}
+	
+	makeDifficultyHarder() {
+		if (this.state.difficultyLevel < 2) {
+			this.setState({ difficultyLevel: this.state.difficultyLevel + 1 })
+		}
 	}
 	
 	incrementScore() {
@@ -42,12 +62,17 @@ class Index extends React.Component {
 		
 		const database = this.props.database
 		
+		console.log(this.state)
+		
 		return (
 			<div className="index">
 				<div className="index-inner">
 
 					<Scene gameState={this.state} database={database}
-						startGame={this.startGame} />
+						makeDifficultyEasier={this.makeDifficultyEasier}
+						makeDifficultyHarder={this.makeDifficultyHarder}
+						startGame={this.startGame}
+						closeGame={this.closeGame} />
 
 					<Score gameState={this.state} database={database}
 						incrementScore={this.incrementScore} />

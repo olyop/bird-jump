@@ -8,9 +8,6 @@ import StartScreen from './start-screen/start-screen'
 // Import CSS
 import './scene.css'
 
-// Import scene background
-import sceneBackground from './scene-background.png'
-
 class Scene extends React.Component {
 	
 	render() {
@@ -18,13 +15,15 @@ class Scene extends React.Component {
 		const props = this.props
 		
 		return (
-			<div className="scene"
-				style={{ backgroundImage: 'url(' + sceneBackground + ')' }} >
+			<div className="scene">
 				
 				{props.gameState.hasGameStarted ? (
-					<World gameState={props.gameState} database={props.database} />
+					<World gameState={props.gameState} database={props.database}
+						closeGame={props.closeGame} />
 				) : (
 					<StartScreen gameState={props.gameState} database={props.database}
+						makeDifficultyEasier={props.makeDifficultyEasier}
+						makeDifficultyHarder={props.makeDifficultyHarder}
 						startGame={props.startGame} />
 				)}
 					

@@ -1,22 +1,22 @@
 .start-screen {
 	margin: 0;
 	position: absolute;
-	top: 50%;
+	top: 42%;
 	left: 50%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
-	margin-right: -50%;
 	transform: translate(-50%, -50%); }
 	.start-screen h1 {
 		font-size: 36px;
 		color: #fff;
-		padding: 20px 40px;
-		margin-bottom: 40px;
+		padding: 20px 60px;
+		margin-bottom: 20px;
 		background-color: #01579B; }
 	.start-screen button {
 		padding: 10px 30px;
+		-webkit-user-select: none;
 		font-size: 20px;
 		text-align: center;
 		cursor: pointer;
@@ -24,8 +24,32 @@
 		color: #fff;
 		border: none;
 		border-radius: 15px;
-		box-shadow: 0 9px #0277BD;
+		box-shadow: 0 10px #0277BD;
 		background-color: #0288D1; }
 		.start-screen button:active {
 			box-shadow: 0 5px #01579B;
 			transform: translateY(4px); }
+
+.start-screen .difficulty-counter {
+	margin-bottom: 20px;
+	display: flex; }
+	.start-screen .difficulty-counter i {
+		-webkit-user-select: none;
+		font-size: 40px;
+		transition: .2s all;
+		padding: 10px;
+		color: #fff;
+		cursor: pointer;
+		border-radius: 100%; }
+		.start-screen .difficulty-counter i:hover {
+			background-color: #0288D1; }
+	.start-screen .difficulty-counter span {
+		-webkit-user-select: none;
+		cursor: pointer;
+		font-size: 30px;
+		width: 170px;
+		text-align: center;
+		padding: 10px 30px;
+		color: #fff; }
+		.start-screen .difficulty-counter span:hover {
+			text-decoration: underline; }

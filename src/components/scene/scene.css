@@ -3,7 +3,5 @@
 	box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.68);
 	display: flex;
 	width: 600px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: repeat-x;
+	background-color: #29B6F6;
 	height: 600px; }

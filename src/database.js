@@ -1,6 +1,9 @@
 const database = {
 	gameTitle: 'Jump Bird',
-	startButtonText: 'Start...'
+	startButtonText: 'Start...',
+	difficultyLevelNames: [
+		'Normal', 'Hard', 'Expert'
+	]
 }
 
 export default database
