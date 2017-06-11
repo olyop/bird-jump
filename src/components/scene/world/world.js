@@ -5,11 +5,17 @@ import React from 'react'
 import './world.css'
 import './world-sun.css'
 
+// Import components
+import SpriteAnimator from 'react-sprite-animator'
+
 // Import wall generator
 import WallGenerator from './wall-generator/wall-generator'
 
 // Import functions
 import { generateWorldLevel } from '../../helpers/world-helpers'
+
+// Import Bird
+import BirdPNG from './bird.png'
 
 class World extends React.Component {
 	
@@ -31,7 +37,11 @@ class World extends React.Component {
 				
 				<div className="bird">
 					
-					
+					<SpriteAnimator
+						sprite={BirdPNG}
+						fps={7}
+						width={68}
+						height={48} />
 					
 				</div>
 				
