@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Import functions
-import rand from '../../../helpers/random'
+import { rand } from '../../../helpers/world-helpers'
 
 const WallGenerator = props => {
 	

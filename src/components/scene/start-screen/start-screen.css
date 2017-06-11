@@ -33,7 +33,10 @@
 .start-screen .difficulty-counter {
 	margin-bottom: 20px;
 	display: flex; }
-	.start-screen .difficulty-counter i {
+	.start-screen .difficulty-counter .difficulty-button {
+		width: 60px;
+		height: 60px; }
+	.start-screen .difficulty-counter .difficulty-button i {
 		-webkit-user-select: none;
 		font-size: 40px;
 		transition: .2s all;

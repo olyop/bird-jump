@@ -22,9 +22,9 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			hasGameStarted: false,
+			hasGameStarted: true,
 			score: 0,
-			difficultyLevel: 1
+			difficultyLevel: 0
 		}
 		
 		this.startGame = this.startGame.bind(this)
@@ -61,8 +61,6 @@ class Index extends React.Component {
 	render() {
 		
 		const database = this.props.database
-		
-		console.log(this.state)
 		
 		return (
 			<div className="index">

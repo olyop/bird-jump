@@ -9,25 +9,31 @@ import './world-sun.css'
 import WallGenerator from './wall-generator/wall-generator'
 
 // Import functions
-import rand from '../../helpers/random'
+import { generateWorldLevel } from '../../helpers/world-helpers'
 
 class World extends React.Component {
+	
+	constructor(props) {
+		super(props)
+		
+		this.state = {
+			level: generateWorldLevel(4, 275, 200, props.gameState.difficultyLevel)
+		}
+	}
+	
 	render() {
 		
 		const props = this.props
 		
-		// Create Emtpy Increment Array
-		let arr = []
-		for (var i = 0; i <= 200; i++) {
-			arr.push({
-				num: i * 275,
-				hasBonus: rand(0, 10) >= 5 ? true : false
-			})
-		}
-		
 		return (
 			<div className="world"
 				id="world">
+				
+				<div className="bird">
+					
+					
+					
+				</div>
 				
 				<div className="world-exit" onClick={props.closeGame}>
 					<i className="material-icons">close</i>
@@ -50,7 +56,7 @@ class World extends React.Component {
 				
 				<div className="walls">
 				
-					{arr.map((item, index) => (
+					{this.state.level.map((item, index) => (
 						<WallGenerator key={index} left={item.num}
 							hasBonus={item.hasBonus}
 							gameState={props.gameState}/>

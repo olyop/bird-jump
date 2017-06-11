@@ -12,11 +12,19 @@ const StartScreen = props => {
 			
 			<div className="difficulty-counter">
 				
-				<i className="material-icons" onClick={props.makeDifficultyEasier}>keyboard_arrow_left</i>
+				<div className="difficulty-button">
+					{props.gameState.difficultyLevel === 0 ? null : (
+						<i className="material-icons" onClick={props.makeDifficultyEasier}>keyboard_arrow_left</i>
+					)}
+				</div>
 				
 				<span>{props.database.difficultyLevelNames[props.gameState.difficultyLevel]}</span>
 				
-				<i className="material-icons" onClick={props.makeDifficultyHarder}>keyboard_arrow_right</i>
+				<div className="difficulty-button">
+					{props.gameState.difficultyLevel === 2 ? null : (
+						<i className="material-icons" onClick={props.makeDifficultyHarder}>keyboard_arrow_right</i>
+					)}
+				</div>
 				
 			</div>
 			
