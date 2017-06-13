@@ -5,10 +5,21 @@ import React from 'react'
 import World from './world/world'
 import StartScreen from './start-screen/start-screen'
 
+// Import functions
+import { generateWorldLevel } from '../helpers/world-helpers'
+
 // Import CSS
 import './scene.css'
 
 class Scene extends React.Component {
+	
+	constructor(props) {
+		super(props)
+		
+		this.state = {
+			world: generateWorldLevel(4, 275, 100, props.gameState.difficultyLevel)
+		}
+	}
 	
 	render() {
 		
@@ -19,6 +30,7 @@ class Scene extends React.Component {
 				
 				{props.gameState.hasGameStarted ? (
 					<World gameState={props.gameState} database={props.database}
+						world={this.state.world}
 						closeGame={props.closeGame} />
 				) : (
 					<StartScreen gameState={props.gameState} database={props.database}

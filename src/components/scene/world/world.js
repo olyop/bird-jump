@@ -11,9 +11,6 @@ import SpriteAnimator from 'react-sprite-animator'
 // Import wall generator
 import WallGenerator from './wall-generator/wall-generator'
 
-// Import functions
-import { generateWorldLevel } from '../../helpers/world-helpers'
-
 // Import Bird
 import BirdPNG from './bird.png'
 
@@ -23,19 +20,44 @@ class World extends React.Component {
 		super(props)
 		
 		this.state = {
-			level: generateWorldLevel(4, 275, 200, props.gameState.difficultyLevel)
+			scroll: 0,
+			birdTop: 100,
 		}
 	}
+	
+	componentDidMount() {
+    this.timerID = setInterval( () => this.tick(), 33 )
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID)
+  }
+
+  tick() {
+    this.setState({
+      scroll: this.state.scroll + 4,
+			birdTop: this.state.birdTop + 6
+    })
+  }
 	
 	render() {
 		
 		const props = this.props
 		
+		// eslint-disable-next-line
+		if (document.getElementById('world') != undefined) {
+			document.getElementById('world').scrollLeft = this.state.scroll
+		}
+		
 		return (
 			<div className="world"
 				id="world">
 				
-				<div className="bird">
+				<div className="bird"
+					style={{
+						left: this.state.scroll + 200,
+						top: this.state.birdTop,
+					}}>
 					
 					<SpriteAnimator
 						sprite={BirdPNG}
@@ -66,8 +88,9 @@ class World extends React.Component {
 				
 				<div className="walls">
 				
-					{this.state.level.map((item, index) => (
-						<WallGenerator key={index} left={item.num}
+					{this.props.world.map((item, index) => (
+						<WallGenerator key={index}
+							item={item}
 							hasBonus={item.hasBonus}
 							gameState={props.gameState}/>
 					))}
