@@ -36,7 +36,7 @@ class World extends React.Component {
   tick() {
     this.setState({
       scroll: this.state.scroll + 4,
-			birdTop: this.state.birdTop + 6
+			birdTop: this.state.birdTop + 0.2
     })
   }
 	
@@ -88,7 +88,7 @@ class World extends React.Component {
 				
 				<div className="walls">
 				
-					{this.props.world.map((item, index) => (
+					{props.gameState.world.map((item, index) => (
 						<WallGenerator key={index}
 							item={item}
 							hasBonus={item.hasBonus}

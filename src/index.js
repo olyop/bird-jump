@@ -15,6 +15,9 @@ import Score from './components/score/score'
 // Import Database
 import databaseImport from './database'
 
+// Import functions
+import { generateWorldLevel } from './components/helpers/world-helpers'
+
 // Index
 class Index extends React.Component {
 	
@@ -24,7 +27,8 @@ class Index extends React.Component {
 		this.state = {
 			hasGameStarted: true,
 			score: 0,
-			difficultyLevel: 0
+			difficultyLevel: 0,
+      world: generateWorldLevel(4, 300, 50, 0)
 		}
 		
 		this.startGame = this.startGame.bind(this)

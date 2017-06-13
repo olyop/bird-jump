@@ -5,7 +5,7 @@ const generateWorldLevel = (startingIndex, incrementNum, incrementEnd, difficult
 	// Create empty level array
 	let arr = []
 	
-	// Generate Level
+	// Generate level
 	for (var i = startingIndex; i <= incrementEnd; i++) {
 		
 		// Account for difficulty setting
