@@ -1,7 +1,10 @@
 // Import React
 import React from 'react'
 
-const WallGenerator = props => {
+// Import css
+import './wall.css'
+
+const Wall = props => {
 	return (
 		<div className="wall-inner" style={{ left: props.item.num }}>
 		
@@ -22,4 +25,4 @@ const WallGenerator = props => {
 	)
 }
 
-export default WallGenerator
+export default Wall

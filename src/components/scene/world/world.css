@@ -11,52 +11,6 @@
 	.world::-webkit-scrollbar-thumb {
 		background-color: #000; }
 
-.world .bird {
-	-webkit-user-select: none;
-	position: absolute;
-	z-index: 12;
-	width: 68px;
-	height: 48px; }
-	.world .bird img {
-		height: 50px;
-		height: 50px; }
-
-.world .wall-inner {
-	display: block;
-	height: 600px;
-	width: 50px;
-	position: absolute; }
-	.world .wall {
-	-webkit-user-select: none;
-		box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.68);
-		position: absolute;
-		left: 0;
-		z-index: 10;
-		width: 50px;
-		border-left: 4px solid #1B5E20;
-		border-right: 4px solid #1B5E20;
-		background-color: #388E3C; } 
-		.world .wall-inner .wall-top {
-			border-bottom: 4px solid #1B5E20;
-			top: 0; }
-		.world .wall-inner .wall-bottom {
-			border-top: 4px solid #1B5E20;
-			bottom: 0; }
-
-.world .wall-inner .wall-bonus {
-	-webkit-user-select: none;
-	position: absolute;
-	left: 0;
-	margin: 0;
-	z-index: 10;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50px; }
-	.world .wall-inner .wall-bonus i {
-		color: #FFEB3B;
-		font-size: 50px; }
-
 .world .world-exit {
 	-webkit-user-select: none;
 	height: 48px;
