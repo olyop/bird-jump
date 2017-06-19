@@ -5,9 +5,10 @@ import React from 'react'
 import './world.css'
 
 // Import components
-import Wall from './wall/wall'
-import Sun from './sun/sun'
 import Bird from './bird/bird'
+import Sun from './sun/sun'
+import Walls from './walls/walls'
+import Exit from './exit/exit'
 
 class World extends React.Component {
 	
@@ -15,8 +16,7 @@ class World extends React.Component {
 		super(props)
 		
 		this.state = {
-			scroll: 0,
-			birdTop: 265,
+			scroll: 0
 		}
 	}
 	
@@ -29,10 +29,7 @@ class World extends React.Component {
   }
 
   tick() {
-    this.setState({
-      scroll: this.state.scroll + 4,
-			birdTop: this.state.birdTop + 0.2
-    })
+    this.setState({ scroll: this.state.scroll + 4 })
   }
 	
 	render() {
@@ -49,25 +46,14 @@ class World extends React.Component {
 				id="world">
 				
 				<Bird gameState={props.gameState}
-					left={this.state.scroll + 265}
-					top={this.state.birdTop} />
-				
-				<div className="world-exit" onClick={props.closeGame}>
-					<i className="material-icons">close</i>
-				</div>
+					left={this.state.scroll + 265} />
 				
 				<Sun />
 				
-				<div className="walls">
+				<Walls gameState={props.gameState} />
 				
-					{props.gameState.world.map((item, index) => (
-						<Wall key={index}
-							item={item}
-							hasBonus={item.hasBonus}
-							gameState={props.gameState} />
-					))}
-					
-				</div>
+				<Exit gameState={props.gameState}
+					closeGame={props.closeGame} />
 				
 			</div>
 		)

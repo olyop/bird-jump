@@ -2,11 +2,11 @@
 import React from 'react'
 
 // Import CSS
-import './difficulty-counter.css'
+import './difficulty-selector.css'
 
-const DifficultyCounter = props => {
+const DifficultySelector = props => {
 	return (
-		<div className="difficulty-counter">
+		<div className="difficulty-selector">
 
 			<div className="difficulty-button">
 				{props.gameState.difficultyLevel === 0 ? null : (
@@ -26,4 +26,4 @@ const DifficultyCounter = props => {
 	)
 }
 
-export default DifficultyCounter
+export default DifficultySelector

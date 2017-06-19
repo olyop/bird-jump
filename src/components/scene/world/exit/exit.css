@@ -1,0 +1,18 @@
+.world .world-exit {
+	-webkit-user-select: none;
+	height: 48px;
+	width: 48px;
+	position: fixed;
+	background-color: #F44336;
+	top: 0;
+	right: 0;
+	z-index: 11; }
+	.world .world-exit i {
+		transition: .2s all;
+		-webkit-user-select: none;
+		cursor: pointer;
+		color: #fff;
+		padding: 10px;
+		font-size: 28px; }
+		.world .world-exit i:hover {
+			background-color: #EF5350; }

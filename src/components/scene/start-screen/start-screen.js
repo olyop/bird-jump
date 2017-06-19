@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Import components
-import DifficultyCounter from './difficulty-counter/difficulty-counter'
+import DifficultySelector from './difficulty-selector/difficulty-selector'
 
 // Import CSS
 import './start-screen.css'
@@ -23,7 +23,7 @@ const StartScreen = props => {
 
 			<GameTitle database={props.database} />
 			
-			<DifficultyCounter gameState={props.gameState} database={props.database}
+			<DifficultySelector gameState={props.gameState} database={props.database}
 				makeDifficultyEasier={props.makeDifficultyEasier}
 				makeDifficultyHarder={props.makeDifficultyHarder} />
 			

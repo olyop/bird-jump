@@ -1,10 +1,10 @@
-.start-screen .difficulty-counter {
+.start-screen .difficulty-selector {
 	margin-bottom: 20px;
 	display: flex; }
-	.start-screen .difficulty-counter .difficulty-button {
+	.start-screen .difficulty-selector .difficulty-button {
 		width: 60px;
 		height: 60px; }
-	.start-screen .difficulty-counter .difficulty-button i {
+	.start-screen .difficulty-selector .difficulty-button i {
 		-webkit-user-select: none;
 		font-size: 40px;
 		transition: .2s all;
@@ -12,9 +12,9 @@
 		color: #fff;
 		cursor: pointer;
 		border-radius: 100%; }
-		.start-screen .difficulty-counter i:hover {
+		.start-screen .difficulty-selector i:hover {
 			background-color: #0288D1; }
-	.start-screen .difficulty-counter span {
+	.start-screen .difficulty-selector span {
 		-webkit-user-select: none;
 		cursor: pointer;
 		font-size: 30px;
@@ -22,5 +22,5 @@
 		text-align: center;
 		padding: 10px 30px;
 		color: #fff; }
-		.start-screen .difficulty-counter span:hover {
+		.start-screen .difficulty-selector span:hover {
 			text-decoration: underline; }
