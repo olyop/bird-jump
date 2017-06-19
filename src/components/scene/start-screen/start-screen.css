@@ -29,30 +29,3 @@
 		.start-screen button:active {
 			box-shadow: 0 5px #01579B;
 			transform: translateY(4px); }
-
-.start-screen .difficulty-counter {
-	margin-bottom: 20px;
-	display: flex; }
-	.start-screen .difficulty-counter .difficulty-button {
-		width: 60px;
-		height: 60px; }
-	.start-screen .difficulty-counter .difficulty-button i {
-		-webkit-user-select: none;
-		font-size: 40px;
-		transition: .2s all;
-		padding: 10px;
-		color: #fff;
-		cursor: pointer;
-		border-radius: 100%; }
-		.start-screen .difficulty-counter i:hover {
-			background-color: #0288D1; }
-	.start-screen .difficulty-counter span {
-		-webkit-user-select: none;
-		cursor: pointer;
-		font-size: 30px;
-		width: 170px;
-		text-align: center;
-		padding: 10px 30px;
-		color: #fff; }
-		.start-screen .difficulty-counter span:hover {
-			text-decoration: underline; }

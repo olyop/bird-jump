@@ -25,7 +25,7 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			hasGameStarted: true,
+			hasGameStarted: false,
 			score: 0,
 			difficultyLevel: 0,
       world: generateWorldLevel(4, 300, 50, 0)
