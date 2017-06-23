@@ -5,7 +5,11 @@ import React from 'react'
 import './sun.css'
 
 const Sun = props => (
-	<div className="sun">
+	<div className="sun"
+		style={{
+			top: props.top + 'px',
+			left: props.left + 'px'
+		}}>
 		<div className="ray_box">
 			<div className="ray ray1"></div>
 			<div className="ray ray2"></div>

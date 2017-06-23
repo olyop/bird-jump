@@ -1,15 +1,12 @@
 .sun {
   position: fixed;
-  top: 55px;
-  left: 265px;
   width: 70px;
   height: 70px;
   border-radius: 50%;
 	z-index: 2;
   background: white;
   opacity: 0.9;
-  box-shadow: 0px 0px 40px 15px white;
-}
+  box-shadow: 0px 0px 40px 15px white; }
 
 .ray_box {
   position: absolute;

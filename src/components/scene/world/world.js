@@ -48,7 +48,7 @@ class World extends React.Component {
 				<Bird gameState={props.gameState}
 					left={this.state.scroll + 265} />
 				
-				<Sun />
+				<Sun top={55} left={265} />
 				
 				<Walls gameState={props.gameState} />
 				
